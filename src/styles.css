@@ -195,7 +195,11 @@ h6 {
   color: black;
 }
 .openSource {
-  font-family: "Courier New", Courier, monospace;
   text-decoration: none;
   color: #67e1f7;
+}
+.myName {
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  bottom: 1120px;
 }
