@@ -1,0 +1,196 @@
+body {
+  margin: 80px;
+}
+h5 {
+  font-size: 22px;
+}
+h6 {
+  font-size: 22px;
+}
+#celsius {
+  text-decoration: none;
+}
+#fahrenheit {
+  text-decoration: none;
+}
+.weather_box {
+  position: relative;
+  top: 20px;
+  display: block;
+  box-sizing: content-box;
+  width: 998px;
+  border: solid #67e1f7 4px;
+  padding: 40px;
+  margin: 80px, auto;
+}
+.weather_position {
+  position: relative;
+  left: 140px;
+  top: 35px;
+}
+.how_weather {
+  font-size: 20px;
+}
+
+.form-control {
+  max-width: 600px;
+  display: inline;
+}
+.btn.btn-info {
+  position: relative;
+  bottom: 0px;
+  left: 50px;
+  display: inline;
+  background-color: #67e1f7;
+}
+.location {
+  position: relative;
+  top: 2px;
+  left: 50px;
+  display: inline;
+  color: #67e1f7;
+  background-color: white;
+  border-color: #67e1f7;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.current_location {
+  font-size: 14px;
+  font-weight: bold;
+}
+.currently {
+  font-size: 30px;
+  font-weight: bold;
+}
+.temperature_celsius {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.temperature_fahrenheit {
+  font-size: 28px;
+  font-weight: bolder;
+  color: grey;
+  text-decoration: none;
+}
+.emojy {
+  position: relative;
+  bottom: 20px;
+  right: 80px;
+  font-size: 60px;
+  text-align: center;
+}
+.precipitation {
+  font-size: 8px;
+  position: relative;
+  bottom: 40px;
+  left: 16px;
+}
+.humidity {
+  font-size: 8px;
+  position: relative;
+  bottom: 40px;
+  left: 16px;
+}
+.wind {
+  font-size: 8px;
+  position: relative;
+  bottom: 40px;
+  left: 16px;
+}
+.daytime {
+  font-size: 12px;
+  position: relative;
+  bottom: 50px;
+}
+.current_weather {
+  font-size: 12px;
+  position: relative;
+  bottom: 60px;
+}
+.row {
+  max-width: 900px;
+}
+.card-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.card-body {
+  text-align: center;
+  background-color: rgba(103, 225, 247, 0.5);
+  border-radius: 2px;
+}
+.Saturday {
+  position: relative;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: card-height;
+  word-wrap: break-word;
+  background-color: card-bg;
+  background-clip: border-box;
+  border: 0;
+  box-shadow: 2px 2px rgba(163, 163, 163, 0.2);
+}
+.Sunday {
+  position: relative;
+  bottom: 253px;
+  left: 219px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: card-height;
+  word-wrap: break-word;
+  background-color: card-bg;
+  background-clip: border-box;
+  border: 0;
+  box-shadow: 2px 2px rgba(163, 163, 163, 0.2);
+}
+.Monday {
+  position: relative;
+  bottom: 546px;
+  left: 438px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: card-height;
+  word-wrap: break-word;
+  background-color: card-bg;
+  background-clip: border-box;
+  border: 0;
+  box-shadow: 2px 2px rgba(163, 163, 163, 0.2);
+}
+.Tuesday {
+  position: relative;
+  bottom: 839px;
+  left: 657px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: card-height;
+  word-wrap: break-word;
+  background-color: card-bg;
+  background-clip: border-box;
+  border: 0;
+  box-shadow: 2px 2px rgba(163, 163, 163, 0.2);
+}
+.Wednesday {
+  position: relative;
+  bottom: 1132px;
+  left: 876px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: card-height;
+  word-wrap: break-word;
+  background-color: card-bg;
+  background-clip: border-box;
+  border: 0;
+  box-shadow: 2px 2px rgba(163, 163, 163, 0.2);
+}
+.hot {
+  color: black;
+}

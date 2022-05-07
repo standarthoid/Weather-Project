@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+     <link rel="stylesheet" href="src/styles.css" />
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather_box">
+          <div class="weather_position">
+        <h2 class="how_weather">How's the weather in</h2>
+        <form id="search-form">
+      <input
+        type="text"
+        placeholder="Search for a city"
+        autocomplete="off"
+        autofocus="on"
+        id="search-text-input"
+      />
+      <input type="submit" class="btn btn-info" value="Go!" />
+      <button class="location" id="location">Current Location</button>
+    </form>
+        <div class="current_location" >Location</div>
+        <div class="row">
+          <div class="col">
+            <div class="currently" id="current-city"></div>
+          </div>
+          <div class="col">
+            <div class="emojy">🌤</div>
+          </div>
+          <div class="col">
+            <span class="temperature_celsius" id="temperature"></span>
+            <span class="temperature_celsius"><a href ="#" id="celsius"></a> </span>
+            <span class="temperature_fahrenheit"><a href ="#" id="fahrenheit"></a></span>
+          </div>
+          <div class="row">
+            <div class="col"><div class="daytime"></div></div>
+            <div class="col"></div>
+            <div class="col">
+              <div class="precipitation" id="precipitation">    </div>
+              <div class="humidity" id="humidity">Humidity: 87%</div>
+              <div class="wind" id="wind">Wind: 16km/h</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="current_weather" id="weather_conditions">partly cloudy</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+          <div class="card2" style="width: 13rem;">
+  <div class="card-body Saturday">
+    <h5 class="card-title">Sat <br/>
+      <br/>🌤
+    </h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">33°</span>&nbsp;&nbsp;&nbsp;25°</h6>
+    <p class="card-text">Sunny, <br/>some clouds <br/><br/>Enjoy some icecream!</p></div>
+      <div class="card-body Sunday">
+    <h5 class="card-title">Sun<br/><br/>🌧</h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">28°</span>&nbsp;&nbsp;&nbsp;22°</h6>
+    <p class="card-text">Very rainy, super windy <br/><br/> Bring an umbrella and a raincoat!</p></div>
+      <div class="card-body Monday">
+    <h5 class="card-title">Mon<br/><br/>🌤</h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">19°</span>&nbsp;&nbsp;&nbsp;15°</h6>
+    <p class="card-text">Sunny, <br/>some clouds <br/><br/>Enjoy some icecream!</p></div>
+       <div class="card-body Tuesday">
+    <h5 class="card-title">Tue<br/><br/>🌧</h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">12°</span>&nbsp;&nbsp;&nbsp;8°</h6>
+    <p class="card-text">Very rainy, super windy <br/><br/> Bring an umbrella and a raincoat!</p></div>
+       <div class="card-body Wednesday">
+    <h5 class="card-title">Wed<br/><br/>🌤</h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">9°</span>&nbsp;&nbsp;&nbsp;2°</h6>
+    <p class="card-text">Sunny, <br/>some clouds <br/><br/>Enjoy some icecream!</p></div>
+    <script src="src/script.js">
+    </script>
+  </body>
+</html>
