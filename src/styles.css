@@ -194,3 +194,8 @@ h6 {
 .hot {
   color: black;
 }
+.openSource {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  color: #67e1f7;
+}
