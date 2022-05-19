@@ -121,16 +121,12 @@ Positioning.addEventListener("click", showCurrentPosition);
 function showFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  celsiusConvert.classList.remove("active");
-  fahrenheitConvert.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelsius(event) {
   event.preventDefault();
-  celsiusConvert.classList.add("active");
-  fahrenheitConvert.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
