@@ -29,10 +29,11 @@ function formatDay(timestamp) {
 }
 
 function weatherConditions(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#current-city").innerHTML = `${response.data.name}`;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
-  )} °C`;
+  )} `;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
@@ -77,7 +78,7 @@ function currentTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     celsiusTemperature
-  )} °C`;
+  )}  `;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
@@ -121,6 +122,8 @@ Positioning.addEventListener("click", showCurrentPosition);
 function showFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusConvert.classList.remove("active");
+  fahrenheitConvert.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -128,6 +131,8 @@ function showFahrenheit(event) {
 function showCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusConvert.classList.add("active");
+  fahrenheitConvert.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 

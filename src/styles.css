@@ -62,17 +62,23 @@ h6 {
   font-size: 30px;
   font-weight: bold;
 }
+.temperature {
+  font-size: 30px;
+  font-weight: bolder;
+}
 .temperature_celsius {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 14px;
   color: black;
   text-decoration: none;
+  position: relative;
+  bottom: 10px;
 }
 .temperature_fahrenheit {
-  font-size: 28px;
-  font-weight: bolder;
+  font-size: 14px;
   color: grey;
   text-decoration: none;
+  position: relative;
+  bottom: 10px;
 }
 .emojy {
   position: relative;
@@ -82,19 +88,19 @@ h6 {
   text-align: center;
 }
 .precipitation {
-  font-size: 8px;
+  font-size: 10px;
   position: relative;
   bottom: 40px;
   left: 16px;
 }
 .humidity {
-  font-size: 8px;
+  font-size: 10px;
   position: relative;
   bottom: 40px;
   left: 16px;
 }
 .wind {
-  font-size: 8px;
+  font-size: 10px;
   position: relative;
   bottom: 40px;
   left: 16px;
@@ -202,4 +208,12 @@ h6 {
   font-family: "Courier New", Courier, monospace;
   position: relative;
   bottom: 1120px;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
