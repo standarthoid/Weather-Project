@@ -74,8 +74,9 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 function currentTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = `${Math.round(
-    response.data.main.temp
+    celsiusTemperature
   )} °C`;
   document.querySelector(
     "#humidity"
@@ -116,5 +117,29 @@ function showCurrentPosition(event) {
 
 let Positioning = document.querySelector("#location");
 Positioning.addEventListener("click", showCurrentPosition);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusConvert.classList.remove("active");
+  fahrenheitConvert.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusConvert.classList.add("active");
+  fahrenheitConvert.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitConvert = document.querySelector("#fahrenheit");
+fahrenheitConvert.addEventListener("click", showFahrenheit);
+let celsiusConvert = document.querySelector("#celsius");
+celsiusConvert.addEventListener("click", showCelsius);
 
 search("Munich");
