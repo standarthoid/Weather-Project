@@ -129,6 +129,7 @@ h6 {
   font-family: "Courier New", Courier, monospace;
   font-size: 12px;
   font-weight: lighter;
+  text-transform: capitalize;
 }
 .card-body {
   text-align: center;
