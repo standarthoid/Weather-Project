@@ -48,9 +48,9 @@ function displayForecast(response) {
   <div class="card-body Saturday">
     <h5 class="card-title">${formatForecastDay(forecastDay.dt)}
      <br/>
-      <br/><img src="http://openweathermap.org/img/wn/${
+      <br/><img class="image" src="src/img/${
         forecastDay.weather[0].icon
-      }@2x.png" alt="" id="icon">
+      }.png" alt="" id="icon">
     </h5>
     <br/>
     <h6 class="card-subtitle mb-2 text-muted"><span class="hot">${Math.round(
@@ -91,10 +91,7 @@ function weatherConditions(response) {
   );
   document
     .querySelector("#icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    .setAttribute("src", "src/img/${response.data.weather[0].icon}.png");
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
