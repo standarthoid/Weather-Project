@@ -156,7 +156,8 @@ h6 {
 .myName {
   font-family: "Courier New", Courier, monospace;
   position: relative;
-  bottom: 1120px;
+  top: 50px;
+  left: 12px;
 }
 .active {
   color: black;
