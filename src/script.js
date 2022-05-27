@@ -35,6 +35,7 @@ function formatForecastDay(timestamp) {
 
   return days[day];
 }
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -45,7 +46,7 @@ function displayForecast(response) {
         forecastHTML +
         `<div class ="col-2">
           <div class="card2" style="width: 13rem;">
-  <div class="card-body Saturday">
+  <div class="card-body Saturday"><div class="card-text-position">
     <h5 class="card-title">${formatForecastDay(forecastDay.dt)}
      <br/>
       <br/><img class="image" src="src/img/${
@@ -53,11 +54,16 @@ function displayForecast(response) {
       }.png" alt="" id="icon">
     </h5>
     <br/>
-    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">${Math.round(
+    <h6 class="card-subtitle mb-2 text-muted" id="hot"><span class="hot">${Math.round(
       forecastDay.temp.max
-    )} °</span>&nbsp;&nbsp;&nbsp;${Math.round(forecastDay.temp.min)} °</h6>
-    <p class="card-text">Sunny, <br/>some clouds <br/><br/>Enjoy some icecream!</p></div></div></div>`;
+    )} °</span>&nbsp;&nbsp;&nbsp;<span id="cold">${Math.round(
+          forecastDay.temp.min
+        )} °</span></h6>
+    <p class="card-text">${
+      forecastDay.weather[0].description
+    }</p></div></div></div></div>`;
     }
+    console.log(forecastDay.weather);
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -65,7 +71,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "b68955b53e53008eb9772143fe4d18a1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
@@ -91,7 +96,7 @@ function weatherConditions(response) {
   );
   document
     .querySelector("#icon")
-    .setAttribute("src", "src/img/${response.data.weather[0].icon}.png");
+    .setAttribute("src", `src/img/${response.data.weather[0].icon}.png`);
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
@@ -168,7 +173,6 @@ function showFahrenheit(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
 function showCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
