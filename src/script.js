@@ -28,6 +28,30 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class ="col-2">
+          <div class="card2" style="width: 13rem;">
+  <div class="card-body Saturday">
+    <h5 class="card-title">${day} <br/>
+      <br/>🌤
+    </h5>
+    <br/>
+    <h6 class="card-subtitle mb-2 text-muted"><span class="hot">33°</span>&nbsp;&nbsp;&nbsp;25°</h6>
+    <p class="card-text">Sunny, <br/>some clouds <br/><br/>Enjoy some icecream!</p></div></div></div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 function weatherConditions(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#current-city").innerHTML = `${response.data.name}`;
